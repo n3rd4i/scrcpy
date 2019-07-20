@@ -1,0 +1,47 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"problemMatcher":[],
+	"tasks": [
+		{
+			"label": "pack",
+			"type": "shell",
+			"command": "${command:chocolatey.pack}",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "admin",
+			"type": "shell",
+			"command": "start cmd '/k pushd ${workspaceFolder}' -verb runas",
+			"options": {"shell": {"executable": "powershell.exe","args": ["-c"]}},
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": "test"
+		},
+		{
+			"label": "install",
+			"type": "shell",
+			"command": "start cmd '/k pushd ${workspaceFolder} && choco install ${workspaceFolderBasename} -fdv -s .' -verb runas",
+			"options": {"shell": {"executable": "powershell.exe","args": ["-c"]}},
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": "test"
+		}
+	]
+}

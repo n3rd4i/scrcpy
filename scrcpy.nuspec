@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>scrcpy</id>
+    <version>1.9.0</version>
+    <packageSourceUrl>https://github.com/n3rd4i/scrcpy.git</packageSourceUrl>
+    <owners>n3rd4i</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>scrcpy (Install)</title>
+    <authors>rom1v,npes87184,sdushantha</authors>
+    <projectUrl>https://github.com/Genymobile/scrcpy</projectUrl>
+    <iconUrl>https://cdn.statically.io/img/avatars0.githubusercontent.com/u/3427627</iconUrl>
+    <copyright>2018 Genymobile</copyright>
+    <licenseUrl>https://github.com/Genymobile/scrcpy/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Genymobile/scrcpy</projectSourceUrl>
+    <docsUrl>https://github.com/Genymobile/scrcpy/blob/master/README.md</docsUrl>
+    <mailingListUrl>https://github.com/Genymobile/scrcpy/graphs/contributors</mailingListUrl>
+    <bugTrackerUrl>https://github.com/Genymobile/scrcpy/issues</bugTrackerUrl>
+    <tags>scrcpy android remote</tags>
+    <summary>App provides display and control of Android devices connected on USB</summary>
+    <description>
+    
+This application provides display and control of Android devices connected on USB (or over TCP/IP). It does not require any root access. It works on GNU/Linux, Windows and MacOS.
+
+     </description>
+    <releaseNotes>https://github.com/Genymobile/scrcpy/releases</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
