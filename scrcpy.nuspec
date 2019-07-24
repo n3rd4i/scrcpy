@@ -18,7 +18,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Genymobile/scrcpy</projectSourceUrl>
     <docsUrl>https://github.com/Genymobile/scrcpy/blob/master/README.md</docsUrl>
-    <mailingListUrl>https://github.com/Genymobile/scrcpy/graphs/contributors</mailingListUrl>
     <bugTrackerUrl>https://github.com/Genymobile/scrcpy/issues</bugTrackerUrl>
     <tags>scrcpy android remote</tags>
     <summary>App provides display and control of Android devices connected on USB</summary>
