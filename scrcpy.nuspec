@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>scrcpy</id>
-    <version>1.13.0</version>
+    <version>1.14.0</version>
     <packageSourceUrl>https://github.com/n3rd4i/scrcpy.git</packageSourceUrl>
     <owners>n3rd4i</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>scrcpy (Install)</title>
+    <title>scrcpy</title>
     <authors>rom1v,npes87184,sdushantha</authors>
     <projectUrl>https://github.com/Genymobile/scrcpy</projectUrl>
     <iconUrl>https://cdn.statically.io/img/avatars0.githubusercontent.com/u/3427627</iconUrl>
