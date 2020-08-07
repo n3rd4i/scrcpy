@@ -29,7 +29,13 @@
 		{
 			"label": "clean",
 			"type": "shell",
-			"command": "${command:chocolatey.delete}",
+			"command": "del /s /q *.nupkg",
+		},
+		{
+			"label": "auto-update",
+			"type": "shell",
+			"command": "$ENV:TEMP = 'T:\\Temp'; ./update.ps1",
+			"options": {"shell": {"executable": "powershell.exe"}}
 		}
 	]
 }

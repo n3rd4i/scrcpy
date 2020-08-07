@@ -2,12 +2,11 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . "$(Join-Path $toolsDir commonEnv.ps1)"
 
-$url        = 'https://github.com/Genymobile/scrcpy/releases/download/v1.14/scrcpy-win64-v1.14.zip'
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  url           = $url
-  checksum      = '2BE9139E46E29CF2F5F695848BB2B75A543B8F38BE1133257DC5068252ABC25F'
+  url           = 'https://github.com/Genymobile/scrcpy/releases/download/v1.15/scrcpy-win64-v1.15.zip'
+  checksum      = 'dd514bb591e63ef4cd52a53c30f1153a28f59722d64690eb07bd017849edcba2'
   checksumType  = 'sha256'
 }
 Install-ChocolateyZipPackage @packageArgs
