@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>scrcpy</id>
-    <version>1.12.1</version>
+    <version>1.16</version>
     <packageSourceUrl>https://github.com/n3rd4i/scrcpy.git</packageSourceUrl>
     <owners>n3rd4i</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>scrcpy (Install)</title>
+    <title>scrcpy</title>
     <authors>rom1v,npes87184,sdushantha</authors>
     <projectUrl>https://github.com/Genymobile/scrcpy</projectUrl>
     <iconUrl>https://cdn.statically.io/img/avatars0.githubusercontent.com/u/3427627</iconUrl>
