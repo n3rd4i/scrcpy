@@ -29,7 +29,7 @@ This application provides display and control of Android devices connected on US
 #### Package Parameters
 The following package parameters can be set:
 
- * `/ExcludeADB` - do not install adb included in scrcpy release (to avoid clobbering adb installed via chocolatey or other means)
+ * `/ExcludeADB` - do not install adb included in scrcpy release (to avoid interfering with adb installed via chocolatey or other means)
 
 To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
