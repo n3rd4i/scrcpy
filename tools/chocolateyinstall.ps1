@@ -11,6 +11,17 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
+$pp = Get-PackageParameters
+if ($pp['ExcludeADB'] -eq 'true') {
+Remove-Item -Path "$(Join-Path $toolsDir adb.exe)"
+Remove-Item -Path "$(Join-Path $toolsDir AdbWinApi.dll)"
+Remove-Item -Path "$(Join-Path $toolsDir AdbWinUsbApi.dll)"
+}
+
+if ($pp['DontShimADB'] -eq 'true') {
+New-Item "$(Join-Path $toolsDir adb.exe.ignore)" -type file -force | Out-Null
+}
+
 $IconUrl = 'https://www.iconfinder.com/icons/3185263/download/ico/512'
 $IconPath = "$(Join-Path $toolsDir android.ico)"
 Get-ChocolateyWebFile -PackageName 'android.ico' `
