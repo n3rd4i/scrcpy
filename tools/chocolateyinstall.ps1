@@ -5,8 +5,8 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  url           = 'https://github.com/Genymobile/scrcpy/releases/download/v1.16/scrcpy-win64-v1.16.zip'
-  checksum      = '3f30dc5db1a2f95c2b40a0f5de91ec1642d9f53799250a8c529bc882bc0918f0'
+  url           = 'https://github.com/Genymobile/scrcpy/releases/download/v1.17/scrcpy-win64-v1.17.zip'
+  checksum      = '8b9e57993c707367ed10ebfe0e1ef563c7a29d9af4a355cd8b6a52a317c73eea'
   checksumType  = 'sha256'
 }
 Install-ChocolateyZipPackage @packageArgs
