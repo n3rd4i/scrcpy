@@ -22,22 +22,25 @@ if ($pp['DontShimADB'] -eq 'true') {
 New-Item "$(Join-Path $toolsDir adb.exe.ignore)" -type file -force | Out-Null
 }
 
-$IconUrl = 'https://www.iconfinder.com/icons/3185263/download/ico/512'
-$IconPath = "$(Join-Path $toolsDir android.ico)"
-Get-ChocolateyWebFile -PackageName 'android.ico' `
-  -FileFullPath "$IconPath" `
-  -Url "$IconUrl" `
-  -Checksum "3DFC23DD4D2124C58CAB83B52C98CE59DF9B62A43A46D99A3C703BA340DCEF3A" `
-  -ChecksumType "sha256"
+## Download & Convert game shortcuts icon
+$iconSrc = 'android'
+$iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc'.png')"
+$iconPath = "$(Join-Path $toolsDir $iconSrc'.ico')"
+Get-ChocolateyWebFile -PackageName $iconSrc `
+  -FileFullPath $iconSrcPath `
+  -Url 'https://www.iconfinder.com/icons/317758/download/png/128' `
+  -Checksum 'B2FE913ED202C908D10ACD1D602CCDB24E2E79F3009570E2CADAF22694FFA4DA' `
+  -ChecksumType 'sha256'
+& png2ico.exe $iconPath $iconSrcPath
 
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$startMenuDir\$AppName.lnk" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$IconPath" `
+  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
 
 ## Desktop
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$IconPath" `
+  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"

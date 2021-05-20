@@ -2,7 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>scrcpy</id>
-    <version>1.17</version>
+    <!-- Package Fix Version Notation: 1.1.0.YYYYMMDD -->
+    <version>1.17.0.20210520</version>
     <packageSourceUrl>https://github.com/n3rd4i/scrcpy.git</packageSourceUrl>
     <owners>n3rd4i</owners>
     <!-- ============================== -->
@@ -39,6 +40,7 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
     <!-- =============================== -->      
   <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
+      <dependency id="png2ico" version="2008.12.08" />
   </dependencies>
   </metadata>
   <files>
