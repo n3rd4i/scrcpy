@@ -22,16 +22,7 @@ if ($pp['DontShimADB'] -eq 'true') {
 New-Item "$(Join-Path $toolsDir adb.exe.ignore)" -type file -force | Out-Null
 }
 
-## Download & Convert game shortcuts icon
-$iconSrc = 'android'
-$iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc'.png')"
-$iconPath = "$(Join-Path $toolsDir $iconSrc'.ico')"
-Get-ChocolateyWebFile -PackageName $iconSrc `
-  -FileFullPath $iconSrcPath `
-  -Url 'https://www.iconfinder.com/icons/317758/download/png/128' `
-  -Checksum 'B2FE913ED202C908D10ACD1D602CCDB24E2E79F3009570E2CADAF22694FFA4DA' `
-  -ChecksumType 'sha256'
-& png2ico.exe $iconPath $iconSrcPath
+$iconPath = "$(Join-Path $toolsDir 'icon.ico')"
 
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$startMenuDir\$AppName.lnk" `
