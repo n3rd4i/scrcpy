@@ -1,0 +1,3 @@
+[submodule "modules/github.com/Genymobile/scrcpy"]
+	path = modules/github.com/Genymobile/scrcpy
+	url = git@github.com:Genymobile/scrcpy.git
