@@ -40,7 +40,6 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
     <!-- =============================== -->      
   <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
-      <dependency id="png2ico" version="2008.12.08" />
   </dependencies>
   </metadata>
   <files>
