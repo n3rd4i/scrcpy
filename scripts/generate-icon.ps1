@@ -23,7 +23,7 @@ function Assert-ProgramExist {
     }
 }
 
-Assert-ProgramExist -ProgramName 'magick' -Reason 'to convert xpm to png'
+Assert-ProgramExist -ProgramName 'magick' -Reason 'to convert png to ico'
 
 magick convert $ICON_PNG -filter point $ICON_ICO
 Remove-Item $ICON_PNG
