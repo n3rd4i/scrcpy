@@ -25,5 +25,5 @@ function Assert-ProgramExist {
 
 Assert-ProgramExist -ProgramName 'magick' -Reason 'to convert png to ico'
 
-magick convert $ICON_PNG -filter point -define icon:auto-resize=16,32,48,64,128,256 $ICON_ICO
+magick convert $ICON_PNG -filter point -define icon:auto-resize=16,32,48,64,128,256 -compress jpeg $ICON_ICO
 Remove-Item $ICON_PNG
