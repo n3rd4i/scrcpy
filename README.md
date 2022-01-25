@@ -1,11 +1,10 @@
 ## Development
 
-### Generation app icon
+### Generate app icon
 
 ```
 .\scripts\generate-icon.ps1
 ```
 
-Build dependencies:
-- [`imagegick`](https://community.chocolatey.org/packages/imagegick)
-- [`png2ico`](https://community.chocolatey.org/packages/png2ico)
+Build dependency:
+- [`imagemagick`](https://community.chocolatey.org/packages/imagemagick)
