@@ -41,16 +41,12 @@ if ($pp['DontShimADB'] -eq 'true') {
 New-Item "$(Join-Path $toolsDir adb.exe.ignore)" -type file -force | Out-Null
 }
 
-$iconPath = "$(Join-Path $toolsDir 'icon.ico')"
-
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$startMenuDir\$AppName.lnk" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
 
 ## Desktop
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"

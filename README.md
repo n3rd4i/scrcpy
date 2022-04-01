@@ -1,11 +1,5 @@
 ## Development
 
-### Generation app icon
+### Download app icon
 
-```
-.\scripts\generate-icon.ps1
-```
-
-Build dependencies:
-- [`imagegick`](https://community.chocolatey.org/packages/imagegick)
-- [`png2ico`](https://community.chocolatey.org/packages/png2ico)
+https://github.com/Genymobile/scrcpy/raw/master/app/data/icon.ico
