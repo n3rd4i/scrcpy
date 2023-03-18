@@ -13,9 +13,10 @@ function global:au_SearchReplace {
 }
 
 # 'https://github.com/Genymobile/scrcpy/releases/download/v1.14/scrcpy-win64-v1.14.zip'
+# 'https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip'
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing #1
   $regex   = 'scrcpy-win64-v\d+.\d+(.\d+)?.zip$'
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing #1
   $sublink     = $download_page.links | ? href -match $regex | select -First 1 -expand href #2
   $url = ($domain, $sublink) -join ''
   $token = $url -split 'scrcpy-win64-v' | select -First 1 -Skip 1 #3
