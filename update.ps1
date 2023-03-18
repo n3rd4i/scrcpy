@@ -12,7 +12,6 @@ function global:au_SearchReplace {
   }
 }
 
-# 'https://github.com/Genymobile/scrcpy/releases/download/v1.14/scrcpy-win64-v1.14.zip'
 # 'https://github.com/Genymobile/scrcpy/releases/download/v1.25/scrcpy-win64-v1.25.zip'
 function global:au_GetLatest {
   $regex   = 'scrcpy-win64-v\d+.\d+(.\d+)?.zip$'
