@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . "$(Join-Path $toolsDir commonEnv.ps1)"
 
-$url = 'https://github.com/Genymobile/scrcpy/releases/download/v2.3.1/scrcpy-win64-v2.3.1.zip'
+$url = 'https://github.com/Genymobile/scrcpy/releases/download/v2.4/scrcpy-win64-v2.4.zip'
 $folderName = $(Split-Path $url -leaf).replace('.zip', '')
 
 # 1. Download bundle
@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileFullPath  = "$(Join-Path $ENV:TEMP 'scrcpy.zip')"
   url           = $url
-  checksum      = 'F1F78AC98214078425804E524A1BED515B9D4B8A05B78D210A4CED2B910B262D'
+  checksum      = '9DC56F21BFA455352EC0C58B40FEAF2FB02D67372910A4235E298ECE286FF3A9'
   checksumType  = 'sha256'
 }
 $archivePath = Get-ChocolateyWebFile @packageArgs
