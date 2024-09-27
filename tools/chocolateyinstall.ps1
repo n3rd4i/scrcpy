@@ -2,7 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . "$(Join-Path $toolsDir commonEnv.ps1)"
 
-$url = 'https://github.com/Genymobile/scrcpy/releases/download/v2.5/scrcpy-win64-v2.5.zip'
+$url = 'https://github.com/Genymobile/scrcpy/releases/download/v2.7/scrcpy-win64-v2.7.zip'
 $folderName = $(Split-Path $url -leaf).replace('.zip', '')
 
 # 1. Download bundle
@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileFullPath  = "$(Join-Path $ENV:TEMP 'scrcpy.zip')"
   url           = $url
-  checksum      = '345CF04A66A9144281DCE72CA4E82ADFD2C3092463196E586051DF4C69E1507B'
+  checksum      = '5910BC18D5A16F42D84185DDC7E16A4CEE6A6F5F33451559C1A1D6D0099BD5F5'
   checksumType  = 'sha256'
 }
 $archivePath = Get-ChocolateyWebFile @packageArgs
@@ -41,16 +41,12 @@ if ($pp['DontShimADB'] -eq 'true') {
 New-Item "$(Join-Path $toolsDir adb.exe.ignore)" -type file -force | Out-Null
 }
 
-$iconPath = "$(Join-Path $toolsDir 'icon.ico')"
-
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$startMenuDir\$AppName.lnk" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
 
 ## Desktop
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
   -TargetPath "$installLocation\$BinName" `
-  -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
