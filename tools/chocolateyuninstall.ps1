@@ -2,6 +2,10 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . "$(Join-Path $toolsDir commonEnv.ps1)"
 
-Remove-Item $shortcutPath -force
-Remove-Item "$startMenuDir" -recurse -force
+if (Test-Path $shortcutPath) {
+    Remove-Item $shortcutPath -force
+}
+if (Test-Path "$startMenuDir") {
+    Remove-Item "$startMenuDir" -recurse -force
+}
 Remove-Item $installLocation -recurse -force

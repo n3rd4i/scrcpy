@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileFullPath  = "$(Join-Path $ENV:TEMP 'scrcpy.zip')"
   url           = $url
-  checksum      = '041FC3ABF8578DDCEAD5A8C4A8BE8960B7C4D45B21D3370EE2683605E86A728C'
+  checksum      = 'DFBE8A8FEF6535197ACC506936BFD59D0AA0427E9B44FB2E5C550EAE642F72BE'
   checksumType  = 'sha256'
 }
 $archivePath = Get-ChocolateyWebFile @packageArgs
