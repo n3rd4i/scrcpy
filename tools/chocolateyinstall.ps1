@@ -45,12 +45,12 @@ $iconPath = "$(Join-Path $toolsDir 'icon.ico')"
 
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$startMenuDir\$AppName.lnk" `
-  -TargetPath "$installLocation\$BinName" `
+  -TargetPath "$installLocation\scrcpy-win64-v2.0\$BinName" `
   -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
 
 ## Desktop
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
-  -TargetPath "$installLocation\$BinName" `
+  -TargetPath "$installLocation\scrcpy-win64-v2.0\$BinName" `
   -IconLocation "$iconPath" `
   -WorkingDirectory "$installLocation"
